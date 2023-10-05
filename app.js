@@ -5,6 +5,7 @@ const app = express();
 dotenv.config();
 const api_key =process.env.API_KEY;
 const api_id =process.env.API_ID;
+const port=process.env.PORT;
 
 app.use(cors({
     origin: 'http://127.0.0.1:5500',
@@ -26,4 +27,6 @@ app.get('/api', async (req, res) => {
     }
 });
 
-app.listen(3000);
+app.listen(port,"0.0.0.0", ()=> {
+    console.log("App chalu ho gyi hai");
+});
