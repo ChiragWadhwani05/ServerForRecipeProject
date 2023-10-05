@@ -8,9 +8,9 @@ const api_id =process.env.API_ID;
 const port=process.env.PORT;
 
 app.use(cors({
-    origin: 'http://127.0.0.1:5500',
+    origin: 'https://0.0.0.0',
     optionsSuccessStatus: 200,
-}))
+}));
 app.get('/', (req, res) => {
     res.setHeader('Content-Type', 'text/plain');
     res.send('HIIIIIIII......');
