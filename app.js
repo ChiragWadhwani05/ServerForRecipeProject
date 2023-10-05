@@ -10,9 +10,11 @@ app.use(cors({
     origin: 'http://127.0.0.1:5500',
     optionsSuccessStatus: 200,
 }))
-app.get('/', (req, res)=>{
+app.get('/', (req, res) => {
+    res.setHeader('Content-Type', 'text/plain');
     res.send('HIIIIIIII......');
-})
+    res.end();
+});
 
 app.get('/api', async (req, res) => {
     try {
