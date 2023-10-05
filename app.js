@@ -10,6 +10,7 @@ const port=process.env.PORT;
 app.use(cors({
     origin: 'https://foodsnippet.netlify.app/',
     optionsSuccessStatus: 200,
+    vary: 'origin',
 }));
 app.get('/', (req, res) => {
     res.setHeader('Content-Type', 'text/plain');
