@@ -8,7 +8,7 @@ const api_id =process.env.API_ID;
 const port=process.env.PORT;
 
 app.use(cors({
-    origin: 'https://0.0.0.0',
+    origin: '*',
     optionsSuccessStatus: 200,
 }));
 app.get('/', (req, res) => {
