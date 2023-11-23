@@ -8,7 +8,7 @@ const api_id =process.env.API_ID;
 const port=process.env.PORT;
 
 app.use(cors({
-    origin: 'https://foodsnippet.netlify.app/',
+    origin: '*',
     optionsSuccessStatus: 200,
     vary: 'origin',
 }));
